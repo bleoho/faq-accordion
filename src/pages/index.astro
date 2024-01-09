@@ -1,123 +1,183 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
+import Layout from "../layouts/Layout.astro";
 ---
 
-<Layout title="Welcome to Astro.">
-	<main>
-		<svg
-			class="astro-a"
-			width="495"
-			height="623"
-			viewBox="0 0 495 623"
-			fill="none"
-			xmlns="http://www.w3.org/2000/svg"
-			aria-hidden="true"
-		>
-			<path
-				fill-rule="evenodd"
-				clip-rule="evenodd"
-				d="M167.19 364.254C83.4786 364.254 0 404.819 0 404.819C0 404.819 141.781 19.4876 142.087 18.7291C146.434 7.33701 153.027 0 162.289 0H332.441C341.703 0 348.574 7.33701 352.643 18.7291C352.92 19.5022 494.716 404.819 494.716 404.819C494.716 404.819 426.67 364.254 327.525 364.254L264.41 169.408C262.047 159.985 255.147 153.581 247.358 153.581C239.569 153.581 232.669 159.985 230.306 169.408L167.19 364.254ZM160.869 530.172C160.877 530.18 160.885 530.187 160.894 530.195L160.867 530.181C160.868 530.178 160.868 530.175 160.869 530.172ZM136.218 411.348C124.476 450.467 132.698 504.458 160.869 530.172C160.997 529.696 161.125 529.242 161.248 528.804C161.502 527.907 161.737 527.073 161.917 526.233C165.446 509.895 178.754 499.52 195.577 500.01C211.969 500.487 220.67 508.765 223.202 527.254C224.141 534.12 224.23 541.131 224.319 548.105C224.328 548.834 224.337 549.563 224.347 550.291C224.563 566.098 228.657 580.707 237.264 593.914C245.413 606.426 256.108 615.943 270.749 622.478C270.593 621.952 270.463 621.508 270.35 621.126C270.045 620.086 269.872 619.499 269.685 618.911C258.909 585.935 266.668 563.266 295.344 543.933C298.254 541.971 301.187 540.041 304.12 538.112C310.591 533.854 317.059 529.599 323.279 525.007C345.88 508.329 360.09 486.327 363.431 457.844C364.805 446.148 363.781 434.657 359.848 423.275C358.176 424.287 356.587 425.295 355.042 426.275C351.744 428.366 348.647 430.33 345.382 431.934C303.466 452.507 259.152 455.053 214.03 448.245C184.802 443.834 156.584 436.019 136.218 411.348Z"
-				fill="url(#paint0_linear_1805_24383)"></path>
-			<defs>
-				<linearGradient
-					id="paint0_linear_1805_24383"
-					x1="247.358"
-					y1="0"
-					x2="247.358"
-					y2="622.479"
-					gradientUnits="userSpaceOnUse"
-				>
-					<stop stop-opacity="0.9"></stop>
-					<stop offset="1" stop-opacity="0.2"></stop>
-				</linearGradient>
-			</defs>
-		</svg>
-		<h1>Welcome to <span class="text-gradient">Astro</span></h1>
-		<p class="instructions">
-			To get started, open the directory <code>src/pages</code> in your project.<br />
-			<strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
-		</p>
-		<ul role="list" class="link-card-grid">
-			<Card
-				href="https://docs.astro.build/"
-				title="Documentation"
-				body="Learn how Astro works and explore the official API docs."
-			/>
-			<Card
-				href="https://astro.build/integrations/"
-				title="Integrations"
-				body="Supercharge your project with new frameworks and libraries."
-			/>
-			<Card
-				href="https://astro.build/themes/"
-				title="Themes"
-				body="Explore a galaxy of community-built starter themes."
-			/>
-			<Card
-				href="https://astro.build/chat/"
-				title="Community"
-				body="Come say hi to our amazing Discord community. ❤️"
-			/>
-		</ul>
-	</main>
+<Layout title="FAQ Accordion">
+  <main>
+	<div class="w-screen">
+		<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="320" fill="none" viewBox="0 0 1440 320"><g clip-path="url(#a)"><path fill="#301534" d="M0 0h1440v320H0z"/><path stroke="#AD28EB" stroke-linecap="round" stroke-width="3" d="M-676-182C-454-10-396.863 71.888-197.5 143.5-99 178.882-36.919 170.726-4.751 170.108c104.487-2.01 204.609-43.237 298.633-85.495 38.354-17.238 75.882-36.189 112.063-57.63 23.903-14.165 58.87-33.913 64.721-64.42 2.32-12.102-16.369-12.24-23.771-9.789-13.511 4.474-25.95 16.544-36.056 25.669-19.131 17.273-37.062 35.948-53.235 56.031-33.728 41.883-68.034 100.247-34.158 152.014 17.287 26.415 43.94 45.693 72.112 59.127 56.182 26.791 119.205 38.742 180.778 44.146 164.438 14.432 328.964-3.461 483.004-63.622 79.76-31.148 158.55-70.539 224.23-126.245 48.56-41.186 102.8-96.548 110.66-162.9 10.93-92.187-94.04-136.062-169.29-148.418-61.41-10.084-123.75-4.164-184.07 9.588-78.262 17.84-149.006 47.67-214.241 94.384-130.002 93.093-234.95 228.413-272.466 385.827-15.64 65.625-16.648 138.21 5.493 202.551 21.452 62.338 69.196 110.576 124.048 144.923 65.117 40.774 137.161 62.14 212.839 73.21 100.474 14.696 202.817 12.233 303.027-2.997 176.17-26.772 352.73-88.431 505.18-181.077 103.22-62.725 199.3-134.15 280.06-224.425 17.7-19.793 31.81-40.875 43.74-64.521C2172.11-58.5 2095.5-145.528 2095.5-151"/></g><defs><clipPath id="a"><path fill="#fff" d="M0 0h1440v320H0z"/></clipPath></defs></svg>
+	</div>
+    <div class="bg-white rounded-xl p-8 max-w-xl mx-auto -mt-32 relative z-10">
+      <h1 class="flex gap-5 text-5xl font-bold items-center pb-2">
+        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="41" fill="none" viewBox="0 0 40 41">
+          <path
+            fill="#AD28EB"
+            d="M37.5 20.5a2.467 2.467 0 0 1-1.64 2.344l-9.913 3.604-3.603 9.911a2.5 2.5 0 0 1-4.688 0l-3.604-9.922-9.911-3.593a2.5 2.5 0 0 1 0-4.688l9.921-3.604 3.594-9.911a2.5 2.5 0 0 1 4.688 0l3.604 9.921 9.911 3.594A2.467 2.467 0 0 1 37.5 20.5Z"
+          ></path>
+        </svg>
+        FAQs
+      </h1>
+      <div class="accordion">
+        <div class="accordion-item cursor-pointer" data-status="opened" tabindex="0">
+          <div class="flex items-center justify-between py-5">
+            <h3 class="title font-semibold">What is Frontend Mentor, and how will it help me?</h3>
+            <!-- plus -->
+            <svg id="plus" xmlns="http://www.w3.org/2000/svg" width="30" height="31" fill="none" viewBox="0 0 30 31">
+              <path
+                fill="#AD28EB"
+                d="M15 3.313A12.187 12.187 0 1 0 27.188 15.5 12.203 12.203 0 0 0 15 3.312Zm4.688 13.124h-3.75v3.75a.938.938 0 0 1-1.876 0v-3.75h-3.75a.938.938 0 0 1 0-1.875h3.75v-3.75a.938.938 0 0 1 1.876 0v3.75h3.75a.938.938 0 0 1 0 1.876Z"
+              ></path>
+            </svg>
+            <!-- minus -->
+            <svg
+              id="minus"
+              class="hidden"
+              xmlns="http://www.w3.org/2000/svg"
+              width="30"
+              height="31"
+              fill="none"
+              viewBox="0 0 30 31"
+            >
+              <path
+                fill="#301534"
+                d="M15 3.313A12.187 12.187 0 1 0 27.188 15.5 12.2 12.2 0 0 0 15 3.312Zm4.688 13.124h-9.375a.938.938 0 0 1 0-1.875h9.374a.938.938 0 0 1 0 1.876Z"
+              ></path>
+            </svg>
+          </div>
+          <p id="paragraph" class="pb-5 hidden text-purpleLight">
+            Frontend Mentor offers realistic coding challenges to help developers improve their frontend coding skills with
+            projects in HTML, CSS, and JavaScript. It's suitable for all levels and ideal for portfolio building.
+          </p>
+        </div>
+        <hr />
+        <div class="accordion-item cursor-pointer" data-status="closed" tabindex="0">
+          <div class="flex items-center justify-between py-5">
+            <h3 class="title font-semibold">Is Frontend Mentor free?</h3>
+            <!-- plus -->
+            <svg id="plus" xmlns="http://www.w3.org/2000/svg" width="30" height="31" fill="none" viewBox="0 0 30 31">
+              <path
+                fill="#AD28EB"
+                d="M15 3.313A12.187 12.187 0 1 0 27.188 15.5 12.203 12.203 0 0 0 15 3.312Zm4.688 13.124h-3.75v3.75a.938.938 0 0 1-1.876 0v-3.75h-3.75a.938.938 0 0 1 0-1.875h3.75v-3.75a.938.938 0 0 1 1.876 0v3.75h3.75a.938.938 0 0 1 0 1.876Z"
+              ></path>
+            </svg>
+            <!-- minus -->
+            <svg
+              id="minus"
+              class="hidden"
+              xmlns="http://www.w3.org/2000/svg"
+              width="30"
+              height="31"
+              fill="none"
+              viewBox="0 0 30 31"
+            >
+              <path
+                fill="#301534"
+                d="M15 3.313A12.187 12.187 0 1 0 27.188 15.5 12.2 12.2 0 0 0 15 3.312Zm4.688 13.124h-9.375a.938.938 0 0 1 0-1.875h9.374a.938.938 0 0 1 0 1.876Z"
+              ></path>
+            </svg>
+          </div>
+          <p id="paragraph" class="pb-5 hidden text-purpleLight">
+            Frontend Mentor offers realistic coding challenges to help developers improve their frontend coding skills with
+            projects in HTML, CSS, and JavaScript. It's suitable for all levels and ideal for portfolio building.
+          </p>
+        </div>
+        <hr />
+        <div class="accordion-item cursor-pointer" data-status="closed" tabindex="0">
+          <div class="flex items-center justify-between py-5">
+            <h3 class="title font-semibold">Can I use Frontend Mentor projects in my portfolio?</h3>
+            <!-- plus -->
+            <svg id="plus" xmlns="http://www.w3.org/2000/svg" width="30" height="31" fill="none" viewBox="0 0 30 31">
+              <path
+                fill="#AD28EB"
+                d="M15 3.313A12.187 12.187 0 1 0 27.188 15.5 12.203 12.203 0 0 0 15 3.312Zm4.688 13.124h-3.75v3.75a.938.938 0 0 1-1.876 0v-3.75h-3.75a.938.938 0 0 1 0-1.875h3.75v-3.75a.938.938 0 0 1 1.876 0v3.75h3.75a.938.938 0 0 1 0 1.876Z"
+              ></path>
+            </svg>
+            <!-- minus -->
+            <svg
+              id="minus"
+              class="hidden"
+              xmlns="http://www.w3.org/2000/svg"
+              width="30"
+              height="31"
+              fill="none"
+              viewBox="0 0 30 31"
+            >
+              <path
+                fill="#301534"
+                d="M15 3.313A12.187 12.187 0 1 0 27.188 15.5 12.2 12.2 0 0 0 15 3.312Zm4.688 13.124h-9.375a.938.938 0 0 1 0-1.875h9.374a.938.938 0 0 1 0 1.876Z"
+              ></path>
+            </svg>
+          </div>
+          <p id="paragraph" class="pb-5 hidden text-purpleLight">
+            Frontend Mentor offers realistic coding challenges to help developers improve their frontend coding skills with
+            projects in HTML, CSS, and JavaScript. It's suitable for all levels and ideal for portfolio building.
+          </p>
+        </div>
+        <hr />
+        <div class="accordion-item cursor-pointer" data-status="closed" tabindex="0">
+          <div class="flex items-center justify-between py-5">
+            <h3 class="title font-semibold">How can I get help if I'm stuck on a challenge?</h3>
+            <!-- plus -->
+            <svg id="plus" xmlns="http://www.w3.org/2000/svg" width="30" height="31" fill="none" viewBox="0 0 30 31">
+              <path
+                fill="#AD28EB"
+                d="M15 3.313A12.187 12.187 0 1 0 27.188 15.5 12.203 12.203 0 0 0 15 3.312Zm4.688 13.124h-3.75v3.75a.938.938 0 0 1-1.876 0v-3.75h-3.75a.938.938 0 0 1 0-1.875h3.75v-3.75a.938.938 0 0 1 1.876 0v3.75h3.75a.938.938 0 0 1 0 1.876Z"
+              ></path>
+            </svg>
+            <!-- minus -->
+            <svg
+              id="minus"
+              class="hidden"
+              xmlns="http://www.w3.org/2000/svg"
+              width="30"
+              height="31"
+              fill="none"
+              viewBox="0 0 30 31"
+            >
+              <path
+                fill="#301534"
+                d="M15 3.313A12.187 12.187 0 1 0 27.188 15.5 12.2 12.2 0 0 0 15 3.312Zm4.688 13.124h-9.375a.938.938 0 0 1 0-1.875h9.374a.938.938 0 0 1 0 1.876Z"
+              ></path>
+            </svg>
+          </div>
+          <p id="paragraph" class="pb-5 hidden text-purpleLight">
+            Frontend Mentor offers realistic coding challenges to help developers improve their frontend coding skills with
+            projects in HTML, CSS, and JavaScript. It's suitable for all levels and ideal for portfolio building.
+          </p>
+        </div>
+      </div>
+    </div>
+  </main>
 </Layout>
 
-<style>
-	main {
-		margin: auto;
-		padding: 1rem;
-		width: 800px;
-		max-width: calc(100% - 2rem);
-		color: white;
-		font-size: 20px;
-		line-height: 1.6;
-	}
-	.astro-a {
-		position: absolute;
-		top: -32px;
-		left: 50%;
-		transform: translatex(-50%);
-		width: 220px;
-		height: auto;
-		z-index: -1;
-	}
-	h1 {
-		font-size: 4rem;
-		font-weight: 700;
-		line-height: 1;
-		text-align: center;
-		margin-bottom: 1em;
-	}
-	.text-gradient {
-		background-image: var(--accent-gradient);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 400%;
-		background-position: 0%;
-	}
-	.instructions {
-		margin-bottom: 2rem;
-		border: 1px solid rgba(var(--accent-light), 25%);
-		background: linear-gradient(rgba(var(--accent-dark), 66%), rgba(var(--accent-dark), 33%));
-		padding: 1.5rem;
-		border-radius: 8px;
-	}
-	.instructions code {
-		font-size: 0.8em;
-		font-weight: bold;
-		background: rgba(var(--accent-light), 12%);
-		color: rgb(var(--accent-light));
-		border-radius: 4px;
-		padding: 0.3em 0.4em;
-	}
-	.instructions strong {
-		color: rgb(var(--accent-light));
-	}
-	.link-card-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-		gap: 2rem;
-		padding: 0;
-	}
-</style>
+<script>
+  const accordionItem = document.querySelectorAll(".accordion-item");
+
+  accordionItem.forEach((item) => {
+    const plus = item.querySelector("#plus");
+    const minus = item.querySelector("#minus");
+    const paragraph = item.querySelector("#paragraph");
+    const status = item.getAttribute("data-status");
+
+    if (status === "opened") {
+      plus.classList.add("hidden");
+      minus.classList.remove("hidden");
+      paragraph.classList.remove("hidden");
+    }
+
+    function toggleAccordion() {
+      plus.classList.toggle("hidden");
+      minus.classList.toggle("hidden");
+      paragraph.classList.toggle("hidden");
+    }
+
+    function handleKeyPress(event) {
+      if (event.key === "Enter" || event.key === " ") {
+        toggleAccordion();
+	  }
+    }
+
+    item.addEventListener("click", toggleAccordion);
+    item.addEventListener("keydown", handleKeyPress);
+  });
+</script>
